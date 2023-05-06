@@ -12,8 +12,14 @@ public class CrimeInfo {
     private String crimeDetails;
     private List<String> suspected;
     
+    private String status;
+    
+    public CrimeInfo() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public CrimeInfo(Date date, String place, String crimeName, List<String> victims, String crimeDetails,
-			List<String> suspected) {
+			List<String> suspected, String status) {
 		super();
 		this.date = date;
 		this.place = place;
@@ -21,6 +27,7 @@ public class CrimeInfo {
 		this.victims = victims;
 		this.crimeDetails = crimeDetails;
 		this.suspected = suspected;
+		this.status = status;
 	}
 
 	public Date getDate() {
@@ -71,12 +78,23 @@ public class CrimeInfo {
 		this.suspected = suspected;
 	}
 
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
 	@Override
 	public String toString() {
 		return "CrimeInfo [date=" + date + ", place=" + place + ", crimeName=" + crimeName + ", victims=" + victims
-				+ ", crimeDetails=" + crimeDetails + ", suspected=" + suspected + "]";
+				+ ", crimeDetails=" + crimeDetails + ", suspected=" + suspected + ", status=" + status + "]";
 	}
     
+    
+    
+	
     
 
 
