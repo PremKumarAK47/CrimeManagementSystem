@@ -11,6 +11,7 @@ public class CrimeInfo {
     private List<String> victims;
     private String crimeDetails;
     private List<String> suspected;
+    private String nearestPoliceStation;
     
     private String status;
     
@@ -19,7 +20,7 @@ public class CrimeInfo {
 	}
 
 	public CrimeInfo(Date date, String place, String crimeName, List<String> victims, String crimeDetails,
-			List<String> suspected, String status) {
+			List<String> suspected, String nearestPoliceStation, String status) {
 		super();
 		this.date = date;
 		this.place = place;
@@ -27,6 +28,7 @@ public class CrimeInfo {
 		this.victims = victims;
 		this.crimeDetails = crimeDetails;
 		this.suspected = suspected;
+		this.nearestPoliceStation = nearestPoliceStation;
 		this.status = status;
 	}
 
@@ -78,6 +80,14 @@ public class CrimeInfo {
 		this.suspected = suspected;
 	}
 
+	public String getNearestPoliceStation() {
+		return nearestPoliceStation;
+	}
+
+	public void setNearestPoliceStation(String nearestPoliceStation) {
+		this.nearestPoliceStation = nearestPoliceStation;
+	}
+
 	public String getStatus() {
 		return status;
 	}
@@ -89,12 +99,11 @@ public class CrimeInfo {
 	@Override
 	public String toString() {
 		return "CrimeInfo [date=" + date + ", place=" + place + ", crimeName=" + crimeName + ", victims=" + victims
-				+ ", crimeDetails=" + crimeDetails + ", suspected=" + suspected + ", status=" + status + "]";
+				+ ", crimeDetails=" + crimeDetails + ", suspected=" + suspected + ", nearestPoliceStation="
+				+ nearestPoliceStation + ", status=" + status + "]";
 	}
-    
-    
-    
-	
+     
+
     
 
 
